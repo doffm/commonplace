@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #47A;
+    font-family:"Volkorn", "Bookman Old Style", Georgia, serif;
+}
+
+.container {
+    padding: 0px;
+    margin: 0 auto 0 auto;
+}
+
+#central {
+    width:570px;
+    margin: 0.5em auto 0 auto;
+    background-color: #FFF;
+    -moz-box-shadow: 0 0 3px 3px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0 2px 3px 2px rgba(0,0,0,0.4);
+    box-shadow: 0 0 3px 3px rgba(0,0,0,0.4);
+
+    -moz-border-top-left-radius: 4px;
+    -moz-border-top-right-radius: 4px;
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+}
+    #central #theend {
+        text-align:center;
+        font-size: 1.3em;
+        color: #999;
+        font-style: italic;
+        padding: 0.5em 0 0.5em 0;
+    }
+
+#toolbar {
+    height: 2em;
+    padding: 0.5em 20px 0.5em 20px;
+    border: 1px solid #B1B1B1;
+    -moz-border-top-left-radius: 4px;
+    -moz-border-top-right-radius: 4px;
+    -webkit-border-top-left-radius: 4px;
+    -webkit-border-top-right-radius: 4px;
+    background: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.1, #BDBDBD),
+        color-stop(0.4, #CCC),
+        color-stop(0.9, #CFCFCF)
+    );
+    background: -moz-linear-gradient(
+        center bottom,
+        #BDBDBD 10%,
+        #CCC 40%,
+        #CFCFCF 90%
+    );
+}
+    #toolbar h3 {
+        font-style: italic;
+    }
+    #toobar #new-entry:hover {
+        cursor: pointer;
+    }
+
+
+#entries {
+    padding: 0 20px 0 20px;
+}
+
+.entry {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+    .entry textarea {
+        font-family:"Volkorn", "Bookman Old Style", Georgia, serif;
+        font-size: 1.3em;
+        line-height: 1.5;
+
+        width: 530px;
+        padding: 1.65em 0 0 0;
+        border: none;
+        overflow-y: hidden;
+        /* Webkit specific text field resize*/
+        resize: none;
+    }   
+    .entry textarea:focus {
+        outline: none;
+        border: none;
+    }
+    .entry .separator {
+        border-top: 1px solid #CCC;
+    }
+    .entry .entry-toolbar {
+        position: absolute;
+        bottom: 0.75em;
+        right: 10px;
+    }
+        .entry .entry-toolbar .delete-icon {
+            float: left;
+            width: 21px;
+            height: 21px;
+            margin-right: 10px;
+            /* This is to fix an error in the icon where it doesn't line up with the favorite icon */
+            margin-top: 1px;
+            background-image: url(media/delete-icon.png);
+        }
+            .entry .entry-toolbar .delete-icon:hover {
+                cursor: pointer;
+            }
+        .entry .entry-toolbar .favorite-icon {
+            float: left;
+            width: 21px;
+            height: 21px;
+            background-image: url(media/favorite-icon.png);
+        }
+            .entry .entry-toolbar .favorite-icon.selected {
+                background-image: url(media/favorite-icon-selected.png);
+            }
+            .entry .entry-toolbar .favorite-icon:hover {
+                cursor: pointer;
+            }

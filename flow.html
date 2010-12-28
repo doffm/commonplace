@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Commonplace</title>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/underscore.js"></script>
+    <script type="text/javascript" src="scripts/backbone.js"></script>
+    <script type="text/javascript" src="scripts/backbone-localstorage.js"></script>
+    <script data-main="main" src="scripts/require.js"></script>
+
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Vollkorn&amp;subset=latin' type='text/css'/>
+	<link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection"/>	
+	<link rel="stylesheet" href="css/flow.css" type="text/css" media="screen, projection"/>
+</head>
+<body>
+    <div class="container">
+        <div id="central">
+            <div id="toolbar">
+                <h3 id="new-entry">New</h3>
+            </div>
+            <div id="entries">
+            </div>
+            <p id="theend">The End</p>
+        </div>
+    </div>
+    
+    <!-- Templates -->
+    <script type="text/template" id="entry-template">
+        <div>
+            <textarea><%= content %></textarea>
+            <div class='entry-toolbar'>
+                <div class='delete-icon'/>
+                <% if (favorite) { %>
+                  <div class='favorite-icon selected'/>
+                <% } else { %>
+                  <div class='favorite-icon'/>
+                <% } %>
+            </div>
+            <div class=separator/>
+        </div>
+    </script>
+</body>
+</html>
