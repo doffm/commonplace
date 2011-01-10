@@ -23,7 +23,7 @@ require (["entry"], function (Entry) {
             el: $("#toolbar"),
 
             events: {
-                "click #new-entry": "newEntry"
+                "click #new": "newEntry"
             },
 
             // Create a new commonplace entry

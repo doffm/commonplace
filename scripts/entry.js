@@ -51,17 +51,17 @@ define (['resize'], function (resizeTextArea) {
         // Keyup is used as the text is already available in
         // `val` on keyup.
         events: {
-          'keyup textarea': 'save',
+          'keyup .main-textarea': 'save',
           'click .entry-toolbar .delete-icon': 'delete',
           'click .entry-toolbar .favorite-icon': 'favorite'
         },
 
         save: function () {
-            this.model.save ({content: this.$('textarea').val()});
+            this.model.save ({content: this.$('.main-textarea').val()});
         },
         
         focus: function () {
-            this.$('textarea').focus();
+            this.$('.main-textarea').focus ();
         },
 
         delete: function () {
@@ -97,6 +97,7 @@ define (['resize'], function (resizeTextArea) {
                 textarea.stop().animate({height:height}, 100);
             });
        
+            ta.addClass ('main-textarea');
             ta.height (initial);
         }
     });
